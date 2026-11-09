@@ -42,4 +42,4 @@ Scans the master list to make sure you didn't accidentally log dates out of orde
 * **The Ignore Box:** Just like the duration scanner, you can use an ignore box (like cell `A5`) to skip any intentional weird dates using the same trick.
 
 ---
-*Check `Formulas.md` for the complete source code.*
+*Check `Formulas.xlsx` for the complete source code.*
