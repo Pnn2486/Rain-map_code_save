@@ -43,3 +43,9 @@ Scans the master list to make sure you didn't accidentally log dates out of orde
 
 ---
 *Check `Formulas.xlsx` for the complete source code.*
+
+## FAQ:
+
+### Why are the formulas written in Python?
+If you're looking at the files and wondering why the code is using Python extensions or syntax highlighting, don't worry—it's not actually Python script. Google Sheets formulas don't really have their own official language tag on GitHub. I just use Python formatting purely for the cool colors. It makes the variables and functions pop, which makes this massive lump of text way easier to read. Just copy and paste it directly into your spreadsheet!
+
