@@ -33,7 +33,9 @@
 
 
 
+
 # 2.2 Progress
+
 
 
 
@@ -41,7 +43,9 @@
 
 
 
+
 # 2.3 Code Gen
+
 
 
 
@@ -81,6 +85,7 @@
 
 
 # 2.4 Dura Gen
+
 
 
 =IF(A1=""; "";
@@ -211,7 +216,9 @@
   TEXTJOIN(CHAR(10); TRUE; incText; wrongText)
 )
 
+
 # 2.6 Debug: Date Spikes Check
+
 
 
 =LET(
