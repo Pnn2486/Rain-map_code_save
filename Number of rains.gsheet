@@ -1,0 +1,30 @@
+=LET(
+  rawA; A5:A;
+  rawB; B5:B;
+  
+  results; MAP(SEQUENCE(ROWS(rawA)); LAMBDA(i;
+    LET(
+      dateStr; TO_TEXT(INDEX(rawA; i));
+      isDate; ISNUMBER(SEARCH("/"; dateStr));
+      
+      IF(NOT(isDate); 0;
+        LET(
+          currB; TRIM(TO_TEXT(INDEX(rawB; i)));
+          IF(currB <> ""; 1;
+            IF(i = 1; 1;
+              LET(
+                prevB; TRIM(TO_TEXT(INDEX(rawB; i - 1)));
+                startHr; IFERROR(VALUE(REGEXEXTRACT(prevB; "^[^0-9]*(\d{1,2})")); -1);
+                endHr; IFERROR(VALUE(REGEXEXTRACT(prevB; "-\s*[^0-9]*(\d{1,2})")); 99);
+                
+                IF(AND(prevB <> ""; startHr > -1; endHr < 99; endHr < startHr); 0; 1)
+              )
+            )
+          )
+        )
+      )
+    )
+  ));
+  SUM(results)
+)
+
